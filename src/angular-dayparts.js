@@ -249,7 +249,7 @@ angular.module('angular-dayparts', [])
             };
 
             $scope.save = function () {
-                $scope.options.save(selected);
+                $scope.options.onSave(selected);
             };
 
             /**
