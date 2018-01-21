@@ -248,6 +248,9 @@ angular.module('angular-dayparts', [])
                 onChangeCallback();
             };
 
+            $scope.save = function () {
+                $scope.options.save(selected);
+            };
 
             /**
              * Remove css class from table and element from selected array
@@ -315,7 +318,8 @@ module.run(['$templateCache', function($templateCache) {
     '        </tr>\n' +
     '    </table>\n' +
     '\n' +
-    '    <button type="button" ng-click="reset()" ng-if="options.reset">Reset</button>\n' +
+    '    <button type="button angular-dayparts-buttton-reset" ng-click="reset()" ng-if="options.reset">Reset</button>\n' +
+    '    <button type="button angular-dayparts-buttton-save" ng-click="save()" ng-if="options.save">Save</button>\n' +
     '\n' +
     '</div>');
 }]);
