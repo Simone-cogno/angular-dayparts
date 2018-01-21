@@ -318,8 +318,8 @@ module.run(['$templateCache', function($templateCache) {
     '        </tr>\n' +
     '    </table>\n' +
     '\n' +
-    '    <button type="button angular-dayparts-buttton-reset" ng-click="reset()" ng-if="options.reset">Reset</button>\n' +
-    '    <button type="button angular-dayparts-buttton-save" ng-click="save()" ng-if="options.save">Save</button>\n' +
+    '    <button type="button" class="angular-dayparts-buttton-reset" ng-click="reset()" ng-if="options.reset">Reset</button>\n' +
+    '    <button type="button" class="angular-dayparts-buttton-save" ng-click="save()" ng-if="options.save">Save</button>\n' +
     '\n' +
     '</div>');
 }]);
