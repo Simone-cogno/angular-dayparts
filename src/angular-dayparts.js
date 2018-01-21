@@ -248,6 +248,9 @@ angular.module('angular-dayparts', [])
                 onChangeCallback();
             };
 
+            $scope.save = function () {
+                $scope.options.save(selected);
+            };
 
             /**
              * Remove css class from table and element from selected array
