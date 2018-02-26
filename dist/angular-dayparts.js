@@ -311,7 +311,7 @@ module.run(['$templateCache', function($templateCache) {
     '        </tr>\n' +
     '        <tr ng-repeat="day in days">\n' +
     '            <th>\n' +
-    '                <a ng-if="!options.disableRowSelection" ng-click="selectDay(day)">{{day.name | \'translate\'}}</a>\n' +
+    '                <a ng-if="!options.disableRowSelection" ng-click="selectDay(day)">{{\'general.\'+ day.name | \'translate\'}}</a>\n' +
     '                <span ng-if="options.disableRowSelection">{{day.name}}</span>\n' +
     '            </th>\n' +
     '            <td ng-repeat="hour in hours" data-time="{{day.name}}-{{hour}}"></td>\n' +
