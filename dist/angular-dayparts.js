@@ -6,12 +6,12 @@ angular.module('angular-dayparts', [])
             options: '='
         },
         templateUrl: 'template.html',
-        controller: ['$scope', '$element', '$attrs', function($scope, $element, $attrs) {
+        controller: ['$scope', '$element', '$attrs', '$filter', function($scope, $element, $attrs, $filter) {
 
             $scope.options = $scope.options || {};
             $scope.options.reset = ($scope.options.reset === undefined) ? true : $scope.options.reset;
 
-            var slavicWeek = [{name: 'monday', position: 1}, {name: 'tuesday', position: 2}, {name: 'wednesday', position: 3}, {name: 'thursday', position: 4}, {name: 'friday', position: 5}, {name: 'saturday', position: 6}, {name: 'sunday', position: 7}];
+            var slavicWeek = [{name: $filter('translate')('angular.dayparts.monday') , position: 1}, {name: $filter('translate')('angular.dayparts.tuesday'), position: 2}, {name: $filter('translate')('angular.dayparts.wednesday'), position: 3}, {name: $filter('translate')('angular.dayparts.thursday'), position: 4}, {name: $filter('translate')('angular.dayparts.friday'), position: 5}, {name: $filter('translate')('angular.dayparts.saturday'), position: 6}, {name: $filter('translate')('angular.dayparts.sunday'), position: 7}];
             var westernWeek = [{name: 'sunday', position: 1}, {name: 'monday', position: 2}, {name: 'tuesday', position: 3}, {name: 'wednesday', position: 4}, {name: 'thursday', position: 5}, {name: 'friday', position: 6}, {name: 'saturday', position: 7}];
 
             if ($scope.options.slavicWeek) {
@@ -20,7 +20,7 @@ angular.module('angular-dayparts', [])
               $scope.days = westernWeek;
             }
             
-            $scope.hours = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24];
+            $scope.hours = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23];
 
             var klass = 'selected';
             var startCell = null;
