@@ -311,15 +311,15 @@ module.run(['$templateCache', function($templateCache) {
     '        </tr>\n' +
     '        <tr ng-repeat="day in days">\n' +
     '            <th>\n' +
-    '                <a ng-if="!options.disableRowSelection" ng-click="selectDay(day)">{{\'general.\'+ day.name | \'translate\'}}</a>\n' +
+    '                <a ng-if="!options.disableRowSelection" ng-click="selectDay(day)">{{\'general.\'+ day.name | translate}}</a>\n' +
     '                <span ng-if="options.disableRowSelection">{{day.name}}</span>\n' +
     '            </th>\n' +
     '            <td ng-repeat="hour in hours" data-time="{{day.name}}-{{hour}}"></td>\n' +
     '        </tr>\n' +
     '    </table>\n' +
     '\n' +
-    '    <button type="button" class="angular-dayparts-buttton-reset" ng-click="reset()" ng-if="options.reset">Reset</button>\n' +
-    '    <button type="button" class="angular-dayparts-buttton-save" ng-click="save()" ng-if="options.save">Save</button>\n' +
+    '    <button type="button" class="angular-dayparts-buttton-reset" ng-click="reset()" ng-if="options.reset">{{\'general.reset\' | translate}}</button>\n' +
+    '    <button type="button" class="angular-dayparts-buttton-save" ng-click="save()" ng-if="options.save">{{\'general.save\' | translate}}</button>\n' +
     '\n' +
     '</div>');
 }]);

@@ -10,14 +10,14 @@
         </tr>
         <tr ng-repeat="day in days">
             <th>
-                <a ng-if="!options.disableRowSelection" ng-click="selectDay(day)">{{'general.'+ day.name | 'translate'}}</a>
+                <a ng-if="!options.disableRowSelection" ng-click="selectDay(day)">{{'general.'+ day.name | translate}}</a>
                 <span ng-if="options.disableRowSelection">{{day.name}}</span>
             </th>
             <td ng-repeat="hour in hours" data-time="{{day.name}}-{{hour}}"></td>
         </tr>
     </table>
 
-    <button type="button" class="angular-dayparts-buttton-reset" ng-click="reset()" ng-if="options.reset">Reset</button>
-    <button type="button" class="angular-dayparts-buttton-save" ng-click="save()" ng-if="options.save">Save</button>
+    <button type="button" class="angular-dayparts-buttton-reset" ng-click="reset()" ng-if="options.reset">{{'general.reset' | translate}}</button>
+    <button type="button" class="angular-dayparts-buttton-save" ng-click="save()" ng-if="options.save">{{'general.save' | translate}}</button>
 
 </div>
